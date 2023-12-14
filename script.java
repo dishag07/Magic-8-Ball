@@ -1,47 +1,14 @@
-let userName = 'Michael';
+function shakeMagicBall() {
 
-userName ? console.log('Hello, ${userName}') : console.log('Hello!');
+const question = prompt('Ask the Magic 8 Ball a Question:')
 
-let userQueston = 'Will I adopt a new puppy soon?';
-
-console.log('${userName} has asked - ${userQuestion}');
-
-let randomNumber = Math.floor(Math.random() * 8);
-
-console.log(randomNumber);
-
-let eightBall = '';
-
-switch(randomNumber) {
-    case 0:
-        eightBall = 'It is certain.';
-        break;
-    case 1:
-        eightball = 'It is decidedly so';
-        break;
-
-            case 2:
-        eightball = 'Reply hazy try again';
-        break;
-
-            case 3:
-        eightball = 'Cannot predict now';
-        break;
-
-            case 4:
-        eightball = 'Do not count on it';
-        break;
-
-            case 5:
-        eightball = 'My sources say no';
-        break;
-    case 6:
-        eightball = 'Outlook not so good';
-        break;
-
-            case 7:
-        eightball = 'Signs point to yes';
-        break;
+if (question === null){
+    document.getElementById('response-text').innerText = 'Please ask a question!'
+    document.getElementById('response-text').classlist = 'text-danger'
+    document.getElementById('response-image').src = 'ENTER IMAGE' //FIXXXXXX IT
 }
 
-console.log('The Magic 8 Ball says, ${eightBall}')
+if (!question.trim()) {
+    alert('Please enter a valid question!')
+    return
+}
